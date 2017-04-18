@@ -14,6 +14,8 @@ find_package(catkin REQUIRED COMPONENTS
   gazebo_ros
 )
 
+find_package(gazebo REQUIRED)
+
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
@@ -86,6 +88,8 @@ generate_messages(
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
+  DEPENDS
+    gazebo_ros
 #  INCLUDE_DIRS include
 #  LIBRARIES walker_homework
  CATKIN_DEPENDS roscpp rospy std_msgs geometry_msgs sensor_msgs gazebo_ros
@@ -101,6 +105,7 @@ catkin_package(
 # include_directories(include)
 include_directories( include
   ${catkin_INCLUDE_DIRS}
+  ${GAZEBO_INCLUDE_DIRS}
 )
 
 ## Declare a cpp library

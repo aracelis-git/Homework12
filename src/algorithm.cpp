@@ -29,7 +29,7 @@ Algorithm::Algorithm(const ros::NodeHandle& n)
 	  ascale_(1.0)
 {
   scan_sub_ = n_.subscribe("scan", 1000, &Algorithm::scanCallback, this);
-  twist_pub_ = n_.advertise<geometry_msgs::Twist>("turtle1/cmd_vel", 1);
+  twist_pub_ = n_.advertise<geometry_msgs::Twist>("/cmd_vel", 1);
 }
 
 void Algorithm::scanCallback(const sensor_msgs::LaserScan::ConstPtr& dist)
