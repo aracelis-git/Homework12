@@ -1,0 +1,10 @@
+<launch>
+
+  <group ns="walker">
+    <node pkg="walker_homework" name="" type="walker_algorithm"/>
+  </group>
+  
+  <include file="$(find walker_homework)/launch/turtlebot_world.launch">
+  </include>
+ 
+</launch>
