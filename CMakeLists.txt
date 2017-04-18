@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   sensor_msgs
   turtlebot_gazebo
+  gazebo_ros
 )
 
 ## System dependencies are found with CMake's conventions
@@ -87,7 +88,7 @@ generate_messages(
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES walker_homework
- CATKIN_DEPENDS roscpp rospy std_msgs geometry_msgs sensor_msgs
+ CATKIN_DEPENDS roscpp rospy std_msgs geometry_msgs sensor_msgs gazebo_ros
 #  DEPENDS system_lib
 )
 
