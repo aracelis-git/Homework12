@@ -4,5 +4,8 @@
   
   <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch">
   </include>
+  
+  <node name="record_topics" pkg="rosbag" type="record" args="record -a -o /home/viki/catkin_ws/src/walker_homework/results/" 
+      if="$(arg bagon)"/>
  
 </launch>
